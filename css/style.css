@@ -1,0 +1,149 @@
+:root{
+    --primary: #0f172a;
+    --accent: #2563eb;
+    --light: #f8fafc;
+    --text: #1e293b;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.narrow {
+    max-width: 700px;
+}
+
+.nav {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.logo {
+    font-weight: 4rem 0;
+    background: var(--light);
+}
+
+.hero {
+    padding: 4rem 0;
+    background: var(--light);
+}
+
+.hero.small {
+    padding: 3rem 0
+}
+
+.section{
+    padding: 3rem 0;
+}
+
+.section.light{
+    background: var(--light);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+    .grid-3, .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .nav nav {
+        display: none;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobile Nav  */
+@media (max-width: 768px) {
+    .menu-toggle{
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 64px;
+        right: 5%;
+        width: 90%;
+        padding: 1rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+    }
+    .nav-links a {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
