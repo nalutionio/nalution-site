@@ -473,10 +473,10 @@ body {
         height: auto;
     }
     #hero-default { 
-        background: linear-gradient(rgba(0,0,0,0.6)), url("../assets/images/vidbackup.png") center/cover no-repeat; 
+        background: linear-gradient(rgba(0,0,0,0.6)), url("assets/images/vidbackup.png") center/cover no-repeat; 
     } 
     #hero-promo { 
-        background: linear-gradient(rgba(0,0,0,0.6)), url("../assets/images/promovid-backup.png") center/cover no-repeat; 
+        background: linear-gradient(rgba(0,0,0,0.6)), url("assets/images/promovid-backup.png") center/cover no-repeat; 
     }
 
     .section.light {
@@ -537,7 +537,7 @@ body {
         background-position: center top;
     }
     #hero-default { 
-        background: linear-gradient(rgba(0,0,0,0.6)), url("../assets/images/vidbackup.png") center/cover no-repeat; 
+        background: linear-gradient(rgba(0,0,0,0.6)), url("assets/images/vidbackup.png") center/cover no-repeat; 
     } 
     #hero-promo { 
         background: linear-gradient(rgba(0,0,0,0.6)), url("../assets/images/promovid-backup.png") center/cover no-repeat; 
