@@ -13,7 +13,11 @@
     <!-- --- NAV --- -->
     <header class="nav">
         <div class="container nav-flex">
-            <div class="logo"> Nalution</div>
+            <div class="logo">
+                <a href="index.html" class="logo">
+                <img src="assets/images/logoblack.png" alt="Nalution">
+                </a>
+            </div>
 
             <button class="menu-toggle" aria-label="Toggle navigation">
                 ☰
@@ -29,15 +33,38 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="container">
+                         <!-- DEFAULT VIDEO  -->
+        <video id="hero-video-default" class="hero-video" autoplay muted loop playsinline>
+            <source src="assets/videos/herobg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                <!-- fallback text  -->
+        </video>
+
+        <!-- PROMO VIDEO  -->
+        <video id="hero-video-promo" class="hero-video" autoplay muted loop playsinlin hidden">
+            <source src="assets/videos/promobg.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-overlay"></div>
+
+                    <!-- DEFAULT HERO  -->
+        <div class="hero-content container" id="hero-default">
             <h1>Get Homeowners Actively Requesting Your Service- Without Door-Knocking</h1>
             <p>Nalution delivers real homeowner requests in your service area so you can focus on the work, not chasing leads.</p>
             <a href="#start" class="btn btn-primary">Get Started Today</a>
+        </div>
+
+                    <!-- PROMO HERO  -->
+        <div class="hero-content container" id="hero-promo" hidden>
+            <h1>Limited Time: Get Leads Delivered for Just $99!</h1>
+            <p>Grab your starter package now and start receiving qualified homeowner requests in your area.</p>
+            <a href="#start" class="btn btn-primary btn-promo">Claim Your $99 Leads</a>
         </div>
     </section>
 
     <!-- How It Works -->
     <section id="how" class="section">
+        <h1 style="text-align: center; padding-bottom: 10px; color: black">How It Works</h1>
         <div class="container grid-3">
             <div class="card">
                 <h3>1. We Reach Homeowners Digitally</h3>
@@ -56,29 +83,172 @@
 
     <!-- Offer -->
     <section class="section light">
-        <div class="container narrow">
-            <h2>Starter Access (Limited Availability)</h2>
-            <ul>
-                <li>Homeowners serives request in your area</li>
-                <li> Weekly delivery</li>
-                <li> Simple onboarding</li>
-                <li>No long-term commitment to start</li>
-            </ul>
+        <div class="container narrow two-columns">
+            <div class="column-left">
+                <span class="eyebrow">Limited Contractor Access</span>
+
+                <h2>Starter Access – Real Homeowner Requests</h2>
+
+                <p class="subtext">
+                    Nalution connects you with homeowners who are already looking for help —
+                    no cold outreach, no door knocking, no wasted time.
+                </p>
+
+                <ul class="checklist">
+                    <li>Homeowners actively requesting service in your area</li>
+                    <li>Monthly request delivery</li>
+                    <li>Simple, fast onboarding</li>
+                    <li>No long-term commitment to get started</li>
+                </ul>
+
+                <p class="trust-note">
+                    We limit contractor access per area to protect quality and avoid oversaturation.
+                </p>
+            </div>
+
+            <div class="column-right">
+                <img src="assets/images/accent2-img.png" alt="home serives">
+
+                <div class="trust-badge">
+                    <span>✔ Local Focused</span>
+                    <span>✔ Contractor Friendly</span>
+                    <span>✔ No Cold Outreach</span>
+                </div>
+            </div>
         </div>
     </section>
     
     <!-- FORM  -->
-    <section id="start" class="section">
-        <div class="container narrow">
-            <h2>Check Availability</h2>
+    <section id="start" class="section contact-section">
+        <div class="container narrow two-columns contact-grid">
 
-            <!-- JOTFORM EMBED -->
-            <div class="form-embed">
-                <!-- Paste Jotform embed here  -->
+            <!-- Left: Contact Info  -->
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Have questions or want to see if your area is open?</p>
+
+                <ul class="contact-list">
+                    <li><strong>Call </strong> <a href="tel:15551234567">(908) 291-8903</a></li>
+                    <li><strong>Email:</strong> <a href="mailto:hello@nalution.com">info@nalutionsolution.com</a></li>
+                    <li><strong>Loacted:</strong> Raritan, NJ 08869</li>
+                </ul>
+
+                <p class="trust-note">
+                    No contracts required · Quick response · Local focus
+                </p>
+            </div> 
+
+            <div class="cta-buttons">
+                <a class="btn btn-primary lightbox-253445794538066">Check Availability</a>
+                <a class="btn btn-primary lightbox-260056382247052" style="display: none;">99 Promotion</a>
+
             </div>
 
+             <!-- =========================
+             DEFAULT FORM LIGHTBOX
+             ========================= -->
+            <div id="form-default-wrapper">
+                <!-- JotForm Lightbox JS -->
+                <script src="https://cdn.jotfor.ms/s/static/latest/static/feedback2.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                    var JFL_253445794538066 = new JotformFeedback({
+                        formId: '253445794538066',
+                        base: 'https://form.jotform.com/',
+                        windowTitle: 'Connect With Us',
+                        backgroundColor: 'var(--primary)',
+                        fontColor: 'var(--text)',
+                        type: false,
+                        height: 500,
+                        width: 700,
+                        openOnLoad: false
+                    });
+                </script>
+
+                <!-- Trigger button -->
+                <!-- <a class="btn lightbox-253445794538066"
+                style="
+                        margin-top: 16px;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        text-decoration: none;
+                        cursor: pointer;
+                        display: inline-block;
+                        padding: 10px;
+                        font-family: inherit;
+                        text-shadow: none;
+                        user-select: none;
+                        transition: all .1s ease-in;
+                        background-color: var(--accent);
+                        border: 1px solid black;
+                        color: #FFFFFF;
+                    ">
+                    Get Started Today
+                </a> -->
+
+                <!-- Connect button to lightbox -->
+                <script>
+                    document.querySelector(".lightbox-253445794538066").addEventListener("click", function(){
+                        JFL_253445794538066.open();
+                    });
+                </script>
+            </div>
+
+             <!-- =========================
+             PROMO FORM LIGHTBOX
+             ========================= -->
+            <div id="form-promo-wrapper" hidden>
+                 <!-- Jotform Lightbox JS -->
+                <script src="https://cdn.jotfor.ms/s/static/latest/static/feedback2.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                    var JFL_260056382247052 = new JotformFeedback({
+                    formId: '260056382247052',
+                    base: 'https://form.jotform.com/',
+                    windowTitle: 'PROMO',
+                    backgroundColor: '#FFA500',
+                    fontColor: '#FFFFFF',
+                    type: false,  /* must be boolean */
+                    height: 500,
+                    width: 700,
+                    openOnLoad: false
+                    });
+                </script>
+
+                <!-- Trigger button -->
+                <!-- <a class="btn lightbox-260056382247052"
+                    style="
+                        margin-top: 16px;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        text-decoration: none;
+                        cursor: pointer;
+                        display: inline-block;
+                        padding: 10px;
+                        font-family: inherit;
+                        text-shadow: none;
+                        user-select: none;
+                        transition: all .1s ease-in;
+                        background-color: #FFA500;
+                        border: 1px solid darkred;
+                        color: #FFFFFF;
+                    ">
+                    $99 PROMOTION
+                </a> -->
+                <small>Takes less than 60 seconds</small>
+
+                <!-- Connect button to lightbox -->
+                <script>
+                    document.querySelector(".lightbox-260056382247052").addEventListener("click", function(){
+                        JFL_260056382247052.open();
+                    });
+                 </script>
+            </div>
         </div>
     </section>
+
+    <div class="mobile-contact-bar">
+        <a href="tel:15551234567" class="mobile-btn call">📞 Call</a>
+        <a href="mailto:hello@nalution.com" class="mobile-btn email">✉️ Email</a>
+    </div>
 
     <!-- FOOTER  -->
     <footer class="footer">
