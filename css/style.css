@@ -65,7 +65,9 @@ body {
 /* HERO SECTION MAIN PAGE */
 .hero {
     padding: 4rem 0;
-    /* background: var(--light); */
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("assets/images/vidbackup.png");
     position: relative;
     min-height: 70vh;
     overflow: hidden;
