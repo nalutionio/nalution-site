@@ -466,15 +466,28 @@ body {
     .hero-video {
         display: none;
     }
-    #hero-default,
+    /* #hero-default,
     #hero-promo {
         background-size: cover;
         background-position: center top;
         height: auto;
+    } */
+    #hero-default {
+        background-image: url("assets/images/vidbackup.png");
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        min-height: 100vh; /* full screen */
+        position: relative;
     }
-    #hero-default { 
-        background: linear-gradient(rgba(0,0,0,0.6)), url("assets/images/vidbackup.png") center/cover no-repeat; 
-    } 
+
+    #hero-default::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        /* background:linear-gradient( rgba(0,0,0,0.6)); *overlay gradient */
+    }
+
     #hero-promo { 
         background: linear-gradient(rgba(0,0,0,0.6)), url("assets/images/promovid-backup.png") center/cover no-repeat; 
     }
