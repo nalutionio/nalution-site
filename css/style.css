@@ -225,8 +225,26 @@ body {
 /* TEMP coming soon hero  */
 .section.light{
     background: #f7f8fa;
-    padding: 90px 0;
-    /* text-align: center; */
+    min-height: 100vh;        /* fill the full viewport height */
+    display: flex;             /* use flex to center content */
+    flex-direction: column;
+    justify-content: center;   /* vertically center */
+    align-items: center;       /* horizontally center */
+    padding: 0 20px;           /* horizontal padding */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Responsive font scaling */
+.section.light h1,
+.section.light h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.section.light p {
+    font-size: 1.1rem;
+    max-width: 600px;
 }
 
 .grid-3 {
@@ -349,8 +367,10 @@ body {
 .cta-buttons {
     /* margin-top: 20px; */
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 12px;
 }
   
 .cta-buttons .btn {
@@ -368,28 +388,109 @@ body {
     font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px){
+/* BASE STYLES */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    /* Grid & columns */
     .grid-3, .grid-2 {
         grid-template-columns: 1fr;
     }
-
-    .nav nav {
-        display: none;
-    }
-
     .two-columns {
         flex-direction: column;
         gap: 20px;
+        padding: 0 20px;
     }
-    .cta-buttons {
-        align-items: stretch;
+
+    .contact-grid {
+        display: flex !important;       /* switch from grid to flex */
+        flex-direction: column !important; /* stack all children vertically */
+        gap: 20px;                       /* spacing between contact info and buttons */
     }
-    .cta-buttons .btn {
-        width: 100%;
+    
+    .column-left h2 {
+        font-size: 1.7rem;
+    }
+    .column-right {
         text-align: center;
     }
 
+    /* CTA Buttons */
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;  /* stack vertically */
+        align-items: stretch; 
+        gap: 12px;
+        width: 100%;    /* buttons fill container width */
+    }
+
+    .cta-buttons .btn {
+        width: 100%;             /* full width buttons */
+        text-align: center;      /* center the text */
+    }
+
+    /* Navigation */
+    .nav nav {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 64px;
+        right: 5%;
+        width: 90%;
+        padding: 1rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+    }
+    .nav-links a {
+        margin: 0.5rem 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Hero Section */
+    .hero-video {
+        display: none;
+    }
+    #hero-default,
+    #hero-promo {
+        background-size: cover;
+        background-position: center top;
+        height: auto;
+    }
+    #hero-default { 
+        background: linear-gradient(rgba(0,0,0,0.6)), url("../assets/images/vidbackup.png") center/cover no-repeat; 
+    } 
+    #hero-promo { 
+        background: linear-gradient(rgba(0,0,0,0.6)), url("../assets/images/promovid-backup.png") center/cover no-repeat; 
+    }
+
+    .section.light {
+        padding: 0 15px;
+    }
+    .section.light h1,
+    .section.light h2 {
+        font-size: 2rem;
+    }
+    .section.light p {
+        font-size: 1.7rem;
+    }
+
+    /* Mobile contact bar */
     .mobile-contact-bar {
         position: fixed;
         bottom: 0;
@@ -410,65 +511,47 @@ body {
     }
     .mobile-btn.call { background: #000; color: #fff; }
     .mobile-btn.email { background: #f5f5f5; color: #000; }
-    
+
     /* Prevent content from being hidden behind sticky bar */
     body { padding-bottom: 56px; }
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* Mobile Nav  */
-@media (max-width: 768px) {
-    .menu-toggle{
-        display: block;
-    }
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 64px;
-        right: 5%;
-        width: 90%;
-        padding: 1rem;
-        border: 1px solid #e5e7eb;
-        border-radius: 8px;
-    }
-    .nav-links a {
-        margin: 0.5rem 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hero-video {
-        display: none;
-    }
-    #hero-default {
-        background: linear-gradient(rgba(0,0,0,0.6)), url("../assets/images/vidbackup.png") center/cover no-repeat;
-    }
-    #hero-promo {
-        background: linear-gradient(rgba(0,0,0,0.6)), url("../assets/images/promovid-backup.png") center/cover no-repeat;
-    }
-
+/* EXTRA SMALL DEVICES (iPhone / narrow screens) */
+@media (max-width: 480px) {
     .two-columns {
-        grid-template-columns: 1fr;
-        gap: 36px;
-      }
-    
-      .column-left h2 {
-        font-size: 1.7rem;
-      }
-    
-      .column-right {
-        text-align: center;
-      }
+        gap: 16px;
+        padding: 0 10px;
+    }
+    .column-left h2 {
+        font-size: 1.5rem;
+    }
+    .cta-buttons {
+        gap: 8px;                /* slightly smaller gap on very small screens */
+    }
+    .cta-buttons .btn {
+        padding: 10px;           /* smaller button padding */
+        font-size: 14px;
+    }
+    #hero-default,
+    #hero-promo {
+        background-position: center top;
+    }
+    #hero-default { 
+        background: linear-gradient(rgba(0,0,0,0.6)), url("../assets/images/vidbackup.png") center/cover no-repeat; 
+    } 
+    #hero-promo { 
+        background: linear-gradient(rgba(0,0,0,0.6)), url("../assets/images/promovid-backup.png") center/cover no-repeat; 
+    }
+    .menu-toggle {
+        font-size: 2rem;
+        padding: 12px;
+    }
 
+    .section.light h1,
+    .section.light h2 {
+        font-size: 1.6rem;
+    }
+    .section.light p {
+        font-size: 0.9rem;
+    }
 }
