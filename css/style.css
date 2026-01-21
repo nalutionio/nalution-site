@@ -225,7 +225,7 @@ body {
 }
 
 /* TEMP coming soon hero  */
-.section.light{
+.coming-soon {
     background: #f7f8fa;
     min-height: 100vh;        /* fill the full viewport height */
     display: flex;             /* use flex to center content */
@@ -494,14 +494,14 @@ body {
         background: linear-gradient(rgba(0,0,0,0.6)), url("assets/images/promovid-backup.png") center/cover no-repeat; 
     }
 
-    .section.light {
+    .coming-soon {
         padding: 0 15px;
     }
-    .section.light h1,
-    .section.light h2 {
+    .coming-soon h1,
+    .coming-soon h2 {
         font-size: 2rem;
     }
-    .section.light p {
+    .coming-soon p {
         font-size: 1.7rem;
     }
 
@@ -562,11 +562,11 @@ body {
         padding: 12px;
     }
 
-    .section.light h1,
-    .section.light h2 {
+    .coming-soon h1,
+    .coming-soon h2 {
         font-size: 1.6rem;
     }
-    .section.light p {
+    .coming-soon p {
         font-size: 0.9rem;
     }
 }
