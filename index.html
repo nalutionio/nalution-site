@@ -1,327 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nalution</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script defer src="js/main.js"></script>
-    </head>
-    <body>
-        
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nalution – Connect with Local Services</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    <!-- --- NAV --- -->
-    <header class="nav">
-        <div class="container nav-flex">
-            <div class="logo">
-                <a href="index.html" class="logo">
-                <img src="assets/images/logoblack.png" alt="Nalution">
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <!-- BACKGROUND VIDEO -->
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="assets/videos/website assets.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <!-- NAV -->
+    <nav class="hero-nav">
+        <div class="nav-container container">
+            <div class="nav-logo">
+                <a href="#">
+                    <img src="assets/images/logowhitetm.png" alt="Nalution Logo" class="logo-img">
                 </a>
             </div>
 
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                ☰
-            </button>
+            <ul class="nav-links">
+                <!-- <li><a href="#about">Who We Are</a></li>
+                <li><a href="#contact">Contact</a></li> -->
+                <li><a href="#">Join the Community – It’s Free!</a></li>
+                <li><a href="https://form.jotform.com/242206909149055" class="nav-cta">Find a Service</a></li>
+            </ul>
 
-            <nav class="nav-links">
-                <a href="#how">How It Works</a>
-                <a href="services.html"> Digital Marketing</a>
-                <a href="https://form.jotform.com/253445794538066" class="btn btn-primary"> Get Started</a>
-            </nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
         </div>
-    </header>
+    </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-                         <!-- DEFAULT VIDEO  -->
-        <video id="hero-video-default" class="hero-video" autoplay muted loop playsinline>
-            <source src="assets/videos/herobg.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                <!-- fallback text  -->
-        </video>
+    <!-- HERO CONTENT -->
+    <div class="hero-content container hero-centered">
+        <h1>A better way to <span class="highlight">connect</span> with local services</h1>
+        <p class="hero-sub">No cold calls. No spam. Just trusted connections between clients and service providers.</p>
 
-        <!-- PROMO VIDEO  -->
-        <video id="hero-video-promo" class="hero-video" autoplay muted loop playsinlin hidden">
-            <source src="assets/videos/promobg.mp4" type="video/mp4">
-        </video>
-
-        <div class="hero-overlay"></div>
-
-                    <!-- DEFAULT HERO  -->
-        <div class="hero-content container" id="hero-default">
-            <h1>Get Homeowners Actively Requesting Your Service- Without Door-Knocking</h1>
-            <p>Nalution delivers real homeowner requests in your service area so you can focus on the work, not chasing leads.</p>
-            <a href="#start" class="btn btn-primary">Get Started Today</a>
+        <div class="hero-buttons">
+            <a href="https://form.jotform.com/242206909149055" class="btn btn-primary">🏡 Find a Service</a>
+            <a href="https://form.jotform.com/253445794538066" class="btn btn-outline">🛠️ Offer a Service</a>
         </div>
 
-                    <!-- PROMO HERO  -->
-        <div class="hero-content container" id="hero-promo" hidden>
-            <h1>Limited Time: Get Leads Delivered for Just $99!</h1>
-            <p>Grab your starter package now and start receiving qualified homeowner requests in your area.</p>
-            <a href="#start" class="btn btn-primary btn-promo">Claim Your $99 Leads</a>
-        </div>
-    </section>
+        <p class="hero-note"><em>Early access connections are currently facilitated through Nalution concierge matching.</em></p>
 
-    <!-- How It Works -->
-    <section id="how" class="section">
-        <h1 style="text-align: center; padding-bottom: 10px; color: black">How It Works</h1>
-        <div class="container grid-3">
-            <div class="card">
-                <h3>1. We Reach Homeowners Digitally</h3>
-                <p>Your service is positioned in front of homeowners in your local area.</p>
-            </div>
-            <div class="card">
-                <h3>2. Homeowners Raise Their Hand</h3>
-                <p>Instead of interruptions, homeowners request help when they’re ready.</p>
-            </div>
-            <div class="card">
-                <h3>3. You Recieve Requests</h3>
-                <p>Qualified homeowner requests — no knocking, no cold outreach.</p>
-            </div>
-        </div>
-    </section>
+        <!-- TESTIMONIAL BELT -->
+        <div class="testimonial-belt">
+            <div class="testimonial-track" id="testimonialTrack">
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://i.pravatar.cc/50?img=47">
+                        <strong>Sarah M.</strong>
+                        <span class="category">Homeowner</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>Finally a platform that connects me with people I actually trust.</p>
+                </div>
 
-    <!-- Offer -->
-    <section class="section light">
-        <div class="container narrow two-columns">
-            <div class="column-left">
-                <span class="eyebrow">Limited Contractor Access</span>
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://i.pravatar.cc/50?img=14">
+                        <strong>JLA Home Improvements Llc</strong>
+                        <span class="category">Contractor</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>No more chasing leads. Clients come already interested.</p>
+                </div>
 
-                <h2>Starter Access – Real Homeowner Requests</h2>
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://i.pravatar.cc/50?img=45">
+                        <strong>Emily R.</strong>
+                        <span class="category">Property Manager</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>This replaced three different platforms for us.</p>
+                </div>
 
-                <p class="subtext">
-                    Nalution connects you with homeowners who are already looking for help —
-                    no cold outreach, no door knocking, no wasted time.
-                </p>
+                <!-- Duplicate cards for infinite loop -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://i.pravatar.cc/50?img=47">
+                        <strong>Sarah M.</strong>
+                        <span class="category">Homeowner</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>For the first time, I feel confident about who I’m hiring.</p>
+                </div>
 
-                <ul class="checklist">
-                    <li>Homeowners actively requesting service in your area</li>
-                    <li>Monthly request delivery</li>
-                    <li>Simple, fast onboarding</li>
-                    <li>No long-term commitment to get started</li>
-                </ul>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://i.pravatar.cc/50?img=14">
+                        <strong>JLA Home Improvements Llc</strong>
+                        <span class="category">Contractor</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>No more chasing leads. Clients come already interested.</p>
+                </div>
 
-                <p class="trust-note">
-                    We limit contractor access per area to protect quality and avoid oversaturation.
-                </p>
-            </div>
-
-            <div class="column-right">
-                <img src="assets/images/accent2-img.png" alt="home serives">
-
-                <div class="trust-badge">
-                    <span>✔ Local Focused</span>
-                    <span>✔ Contractor Friendly</span>
-                    <span>✔ No Cold Outreach</span>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://i.pravatar.cc/50?img=45">
+                        <strong>Emily R.</strong>
+                        <span class="category">Property Manager</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>This replaced three different platforms for us.</p>
                 </div>
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section id="about" class="section">
+    <h1 style="text-align: center; padding-bottom: 15px; color: #1e293b;">Who We Are</h1>
+
+    <div class="container grid-3">
+        <div class="card">
+            <h3>Connection-First Platform</h3>
+            <p>Nalution is built to remove friction from finding and offering local services.</p>
+        </div>
+        <div class="card">
+            <h3>Trust and Mutual Intent</h3>
+            <p>We focus on trust, real outcomes, and mutual intent — not ads or cold outreach.</p>
+        </div>
+        <div class="card">
+            <h3>Real Results</h3>
+            <p>Clients find the services they need when they need them, and providers connect with the right people.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+
+    <!-- Newsletter Section -->
+    <div class="footer-newsletter container">
+        <h3>Subscribe to Our Newsletter</h3>
+        <p>Get updates via email or SMS.</p>
+        <form id="newsletterForm" class="newsletter-form">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="tel" name="phone" placeholder="Enter your phone (optional)">
+            <button type="submit">Subscribe</button>
     
-    <!-- FORM  -->
-    <section id="start" class="section contact-section">
-        <div class="container narrow two-columns contact-grid">
-
-            <!-- Left: Contact Info  -->
-            <div class="contact-info">
-                <h2>Contact Us</h2>
-                <p>Have questions or want to see if your area is open?</p>
-
-                <ul class="contact-list">
-                    <li><strong>Call </strong> <a href="tel:9082918903">(908) 291-8903</a></li>
-                    <li><strong>Email:</strong> <a href="mailto:info@nalutionsolution.com">info@nalutionsolution.com</a></li>
-                    <li><strong>Loacted:</strong> Raritan, NJ 08869</li>
-                </ul>
-
-                <p class="trust-note">
-                    <!-- Quick response · Local focus -->
-                    By providing your phone number you consent to receive text messages from Nalution Properties regarding my service request, matching, scheduling, your inquiries, account updates, and other relevant information. Message frequency will vary. Message and data rates may apply. For assistance, reply HELP or contact support@nalutionsolution.com, (833)-865-7904, or www.nalutionsolution.com. To stop receiving messages, reply STOP. No further messages will be sent. For details, see our
-                    <a href="privacy.html">Privacy Policy  [https://www.nalutionsolution.com/privacy.html].</a>
-                </p> 
-            </div> 
-
-            <a href="TCR.html" 
-                style="
-                    display:inline-block;
-                    padding:12px 24px;
-                    background-color:#FFA500;
-                    color:#FFFFFF;
-                    text-decoration:none;
-                    text-transform:uppercase;
-                    font-family:inherit;
-                    font-weight:bold;
-                    border-radius:6px;
-                    transition: all .2s ease-in-out;
-                ">
-                Contact / SMS Sign-Up
-            </a>
-
-            <!-- <div class="cta-buttons">
-                <a class="btn btn-primary lightbox-253445794538066">Check Availability</a>
-                <a class="btn btn-primary lightbox-260056382247052" style="display: none;">99 Promotion</a>
-
-            </div> -->
-
-             <!-- =========================
-             DEFAULT FORM LIGHTBOX
-             ========================= -->
-            <div id="form-default-wrapper">
-                <!-- JotForm Lightbox JS -->
-                <!-- <script src="https://cdn.jotfor.ms/s/static/latest/static/feedback2.js" type="text/javascript"></script>
-                <script type="text/javascript">
-                    var JFL_253445794538066 = new JotformFeedback({
-                        formId: '253445794538066',
-                        base: 'https://form.jotform.com/',
-                        windowTitle: 'Connect With Us',
-                        backgroundColor: 'var(--primary)',
-                        fontColor: 'var(--text)',
-                        type: false,
-                        height: 500,
-                        width: 700,
-                        openOnLoad: false
-                    });
-                </script> -->
-
-                <!-- Trigger button -->
-                <!-- <a class="btn lightbox-253445794538066"
-                style="
-                        margin-top: 16px;
-                        text-transform: uppercase;
-                        font-size: 14px;
-                        text-decoration: none;
-                        cursor: pointer;
-                        display: inline-block;
-                        padding: 10px;
-                        font-family: inherit;
-                        text-shadow: none;
-                        user-select: none;
-                        transition: all .1s ease-in;
-                        background-color: var(--accent);
-                        border: 1px solid black;
-                        color: #FFFFFF;
-                    ">
-                    Get Started Today
-                </a> -->
-
-                <!-- Connect button to lightbox -->
-                <!-- <script>
-                    document.querySelector(".lightbox-253445794538066").addEventListener("click", function(){
-                        JFL_253445794538066.open();
-                    });
-                </script> -->
-
-                <!-- New Embedded Iframe Form -->
-                <!-- Embedded Iframe Form: Nalution | Authorized Contact -->
-                <div class="form-wrapper" style="max-width:900px; margin:0 auto; padding:20px;">
-                    <iframe
-                        id="JotFormIFrame-253445794538066"
-                        title="Nalution | Authorized Contact"
-                        onload="window.parent.scrollTo(0,0)"
-                        allowtransparency="true"
-                        allow="geolocation; microphone; camera; fullscreen; payment"
-                        src="https://form.jotform.com/253445794538066"
-                        frameborder="0"
-                        style="min-width:100%; max-width:100%; height:539px; border:none;"
-                        scrolling="no"
-                    ></iframe>
-                </div>
-
-                <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
-                <script>
-                    window.jotformEmbedHandler(
-                        "iframe[id='JotFormIFrame-253445794538066']",
-                        "https://form.jotform.com/"
-                    );
-                </script>
-
-                <!-- Optional: Button linking to this page -->
-                <!-- <div style="text-align:center; margin-top:20px;">
-                    <a href="/authorized-contact" 
-                        style="
-                            text-transform: uppercase;
-                            font-size: 14px;
-                            text-decoration: none;
-                            cursor: pointer;
-                            display: inline-block;
-                            padding: 10px 20px;
-                            font-family: inherit;
-                            text-shadow: none;
-                            user-select: none;
-                            transition: all .1s ease-in;
-                            background-color: #FFA500;
-                            border: 1px solid #FFA500;
-                            color: #FFFFFF;
-                    ">
-                    Nalution | Authorized Contact
-                    </a>
-                </div> -->
-
-            </div>
-
-             <!-- =========================
-             PROMO FORM LIGHTBOX
-             ========================= -->
-            <!-- <div id="form-promo-wrapper" hidden> -->
-                 <!-- Jotform Lightbox JS -->
-                <!-- <script src="https://cdn.jotfor.ms/s/static/latest/static/feedback2.js" type="text/javascript"></script>
-                <script type="text/javascript">
-                    var JFL_260056382247052 = new JotformFeedback({
-                    formId: '260056382247052',
-                    base: 'https://form.jotform.com/',
-                    windowTitle: 'PROMO',
-                    backgroundColor: '#FFA500',
-                    fontColor: '#FFFFFF',
-                    type: false,  /* must be boolean */
-                    height: 500,
-                    width: 700,
-                    openOnLoad: false
-                    });
-                </script> -->
-
-                <!-- Trigger button -->
-                <!-- <a class="btn lightbox-260056382247052"
-                    style="
-                        margin-top: 16px;
-                        text-transform: uppercase;
-                        font-size: 14px;
-                        text-decoration: none;
-                        cursor: pointer;
-                        display: inline-block;
-                        padding: 10px;
-                        font-family: inherit;
-                        text-shadow: none;
-                        user-select: none;
-                        transition: all .1s ease-in;
-                        background-color: #FFA500;
-                        border: 1px solid darkred;
-                        color: #FFFFFF;
-                    ">
-                    $99 PROMOTION
-                </a> -->
-                <!-- <small>Takes less than 60 seconds</small> -->
-
-                <!-- Connect button to lightbox -->
-                <!-- <script>
-                    document.querySelector(".lightbox-260056382247052").addEventListener("click", function(){
-                        JFL_260056382247052.open();
-                    });
-                 </script>
-            </div>
-        </div> -->
-    </section>
-
-    <div class="mobile-contact-bar">
-        <a href="tel:9082918903" class="mobile-btn call">📞 Call</a>
-        <a href="mailto:info@nalutionsolution.com" class="mobile-btn email">✉️ Email</a>
+            <p class="newsletter-disclaimer">
+                Nalution sends messages only in response to user request or account activity. We do not send unsolicited marketing text messages.
+            </p>
+    
+            <p id="newsletterMessage" style="display:none; color: var(--primary); font-weight: bold; margin-top: 0.5rem;">
+                Thank you! Your subscription has been received.
+            </p>
+        </form>
     </div>
 
-    <!-- FOOTER  -->
-    <footer class="footer">
-        <p>© 2026 Nalution Properties Llc. All rights reserved.</p>
-        <a href="privacy.html">Privacy Policy</a>
-    </footer>
+    <!-- Divider -->
+    <hr class="footer-divider">
 
+    <!-- Contact + Links Section -->
+    <div class="footer-bottom container">
+        <!-- Left: Contact Info -->
+        <div class="footer-contact">
+            <p>Email: <a href="mailto:csupport@nalutionsolution.com">support@nalutionsolution.com</a></p>
+            <p>Phone: <a href="tel:+18338657904">(833) 865-7904</a></p>
+            <p>Location: Raritan, NJ</p>
+        </div>
 
-    </body>
+        <!-- Middle: Policy links -->
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Condtions</a>
+            <a href="cookies.html">Cookie Policy</a>
+        </div>
 
+        <!-- Right: Branding + copyright -->
+        <div class="footer-left">
+            <strong>Nalution Properties Llc</strong> &copy; 2026
+        </div>
+    </div>
+</footer>
+
+ <!-- Add at the bottom of body or hero section -->
+ <div class="mobile-cta">
+    <a href="https://form.jotform.com/242206909149055" class="btn btn-primary">🏡  Find a Service</a>
+    <a href="https://form.jotform.com/253445794538066" class="btn btn-outline">🛠️  Offer a Service</a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
 </html>
