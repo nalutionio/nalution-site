@@ -557,6 +557,10 @@ body {
         overflow-x: hidden;
     }
 
+    body, .main-content {
+        padding-bottom: 80px; /* adjust based on your sticky height */
+    }
+
     /* HERO */
     .hero-content {
         padding-top: 6rem; /* push below nav */
@@ -713,6 +717,10 @@ body {
     }
 
     /* FOOTER */
+    /* footer {
+        padding-bottom: 100px; 
+    } */
+
     .footer-bottom {
         flex-direction: column;
         align-items: flex-start;
@@ -770,6 +778,14 @@ body {
     .cc-bottom,
     .cc-color-override--1735012231 {
         display: none !important;
+        /* position: fixed !important;   keep it floating */
+        /* bottom: 50%;                  vertical center */
+        /* left: 0;                      stick to left edge */
+        /* transform: translateY(50%);   adjust vertical centering */
+        /* z-index: 1000;                above content but below sticky if needed */
+        /* border-radius: 0 6px 6px 0;  optional rounded right edges */
+        /* padding: 0.5rem 0.8rem; */
+        /* font-size: 0.9rem; */
     }
 
 
