@@ -543,6 +543,12 @@ body {
     background: var(--accent);
   }
 
+  .cc-revoke,
+  .cc-bottom,
+  .cc-color-override--1735012231 {
+        display: none !important;
+    }
+
 /* ================= MOBILE: max-width 768px ================= */
 @media (max-width: 768px) {
 
@@ -717,6 +723,7 @@ body {
         flex-wrap: wrap;
         gap: 0.5rem;
     }
+    
 
     /* STICKY CTA BOTTOM */
     .mobile-cta {
@@ -758,6 +765,14 @@ body {
         background: var(--accent);
         color: #000;
     }
+
+    .cc-revoke,
+    .cc-bottom,
+    .cc-color-override--1735012231 {
+        display: none !important;
+    }
+
+
 }
 
 /* ================= SMALL SCREENS: max-width 480px ================= */
@@ -791,4 +806,7 @@ body {
         top: 15%;
         padding: 1.5rem;
       }
+      
+
+
 }
