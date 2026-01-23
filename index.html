@@ -26,54 +26,54 @@
   href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
 
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<script>
-    window.cookieconsent.initialise({
-      palette: {
-        popup: {
-          background: "#000"
-        },
-        button: {
-          background: "#c1ff72",
-          text: "#000"
-        }
-      },
-      theme: "classic",
-      type: "opt-in",
-    
-      content: {
-        message: "We use cookies to improve performance, analyze traffic, and personalize content.",
-        allow: "Accept all",
-        deny: "Reject non-essential",
-        link: "Customize",
-        href: "/cookies"
-      },
-    
-      onInitialise: function (status) {
-        if (this.hasConsented()) {
-          enableCookies();
-        }
-      },
-    
-      onStatusChange: function (status) {
-        if (this.hasConsented()) {
-          enableCookies();
-        }
-      }
-    });
-    
-    function enableCookies() {
-      document
-        .querySelectorAll('script[type="text/plain"][data-cookiecategory="analytics"]')
-        .forEach(script => {
-          const s = document.createElement('script');
-          if (script.src) s.src = script.src;
-          else s.textContent = script.textContent;
-          document.body.appendChild(s);
-        });
-    }
-    </script>
 
 <body>
+    <script>
+        window.cookieconsent.initialise({
+          palette: {
+            popup: {
+              background: "#000"
+            },
+            button: {
+              background: "#c1ff72",
+              text: "#000"
+            }
+          },
+          theme: "classic",
+          type: "opt-in",
+        
+          content: {
+            message: "We use cookies to improve performance, analyze traffic, and personalize content.",
+            allow: "Accept all",
+            deny: "Reject non-essential",
+            link: "Customize",
+            href: "/cookies"
+          },
+        
+          onInitialise: function (status) {
+            if (this.hasConsented()) {
+              enableCookies();
+            }
+          },
+        
+          onStatusChange: function (status) {
+            if (this.hasConsented()) {
+              enableCookies();
+            }
+          }
+        });
+        
+        function enableCookies() {
+          document
+            .querySelectorAll('script[type="text/plain"][data-cookiecategory="analytics"]')
+            .forEach(script => {
+              const s = document.createElement('script');
+              if (script.src) s.src = script.src;
+              else s.textContent = script.textContent;
+              document.body.appendChild(s);
+            });
+        }
+        </script>
 
 <!-- HERO SECTION -->
 <section class="hero">
