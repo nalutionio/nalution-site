@@ -1,269 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nalution – Connect with Local Services</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nalution – Connect with Local Services</title>
+    <link rel="stylesheet" href="css/style.css">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RVY4PRBHBB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVY4PRBHBB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-RVY4PRBHBB');
-</script>
+        gtag('config', 'G-RVY4PRBHBB');
+    </script>
 
-<script type="text/plain" data-cookiecategory="analytics"
-  src="https://www.googletagmanager.com/gtag/js?id=G-RVY4PRBHBB">
-</script>
+    <script type="text/plain" data-cookiecategory="analytics"
+        src="https://www.googletagmanager.com/gtag/js?id=G-RVY4PRBHBB">
+        </script>
 
 </head>
 
-<link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
 
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 
 <body>
     <script>
         window.cookieconsent.initialise({
-          palette: {
-            popup: {
-              background: "#000"
+            palette: {
+                popup: { background: "#000" },
+                button: { background: "#c1ff72", text: "#000" }
             },
-            button: {
-              background: "#c1ff72",
-              text: "#000"
+            theme: "classic",
+            type: "opt-in",
+            content: {
+                message: "We use cookies to improve performance, analyze traffic, and personalize content.",
+                allow: "Accept all",
+                deny: "Reject non-essential",
+                link: "Customize",
+                href: "/cookies"
+            },
+            onInitialise: function (status) {
+                if (this.hasConsented()) {
+                    enableCookies();
+                    this.popup.hide(); // hide banner if already consented
+                }
+            },
+            onStatusChange: function (status, chosenBefore) {
+                // Always hide the banner regardless of choice
+                enableCookies();
+                if (this.popup) {
+                    this.popup.hide();
+                }
             }
-          },
-          theme: "classic",
-          type: "opt-in",
-        
-          content: {
-            message: "We use cookies to improve performance, analyze traffic, and personalize content.",
-            allow: "Accept all",
-            deny: "Reject non-essential",
-            link: "Customize",
-            href: "/cookies"
-          },
-        
-          onInitialise: function (status) {
-            if (this.hasConsented()) {
-              enableCookies();
-            }
-          },
-        
-          onStatusChange: function (status) {
-            if (this.hasConsented()) {
-              enableCookies();
-            }
-          }
         });
-        
+
         function enableCookies() {
-          document
-            .querySelectorAll('script[type="text/plain"][data-cookiecategory="analytics"]')
-            .forEach(script => {
-              const s = document.createElement('script');
-              if (script.src) s.src = script.src;
-              else s.textContent = script.textContent;
-              document.body.appendChild(s);
-            });
+            document.querySelectorAll('script[type="text/plain"][data-cookiecategory="analytics"]')
+                .forEach(script => {
+                    const s = document.createElement('script');
+                    if (script.src) s.src = script.src;
+                    else s.textContent = script.textContent;
+                    document.body.appendChild(s);
+                });
         }
-        </script>
+    </script>
 
-<!-- HERO SECTION -->
-<section class="hero">
+    <!-- HERO SECTION -->
+    <section class="hero">
 
-    <!-- BACKGROUND VIDEO -->
-    <video class="hero-video" autoplay muted loop playsinline>
-        <source src="assets/videos/website assets.mp4" type="video/mp4">
-    </video>
+        <!-- BACKGROUND VIDEO -->
+        <video class="hero-video" autoplay muted loop playsinline preload="auto">
+            <source src="assets/videos/website-assets.mp4" type="video/mp4">
+        </video>
 
-    <div class="hero-overlay"></div>
+        <div class="hero-overlay"></div>
 
-    <!-- NAV -->
-    <nav class="hero-nav">
-        <div class="nav-container container">
-            <div class="nav-logo">
-                <a href="#">
-                    <img src="assets/images/logowhitetm.png" alt="Nalution Logo" class="logo-img">
-                </a>
+        <!-- NAV -->
+        <nav class="hero-nav">
+            <div class="nav-container container">
+                <div class="nav-logo">
+                    <a href="#">
+                        <img src="assets/images/logowhitetm.png" alt="Nalution Logo" class="logo-img">
+                    </a>
+                </div>
+
+                <ul class="nav-links">
+                    <!-- <li><a href="#about">Who We Are</a></li>
+                    <li><a href="#contact">Contact</a></li> -->
+                    <li><a href="#">Join the Community – It’s Free!</a></li>
+                    <li><a href="https://form.jotform.com/242206909149055" class="nav-cta">Find a Service</a></li>
+                </ul>
+
+                <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            </div>
+        </nav>
+
+        <!-- HERO CONTENT -->
+        <div class="hero-content container hero-centered">
+            <h1>A better way to <span class="highlight">connect</span> with local services</h1>
+            <p class="hero-sub">No cold calls. No spam. Just trusted connections between clients and service providers.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="https://form.jotform.com/242206909149055" class="btn btn-primary">🏡 Find a Service</a>
+                <a href="https://form.jotform.com/253445794538066" class="btn btn-outline">🛠️ Offer a Service</a>
             </div>
 
-            <ul class="nav-links">
-                <!-- <li><a href="#about">Who We Are</a></li>
-                <li><a href="#contact">Contact</a></li> -->
-                <li><a href="#">Join the Community – It’s Free!</a></li>
-                <li><a href="https://form.jotform.com/242206909149055" class="nav-cta">Find a Service</a></li>
-            </ul>
+            <p class="hero-note"><em>Early access connections are currently facilitated through Nalution concierge
+                    matching.</em></p>
 
-            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-        </div>
-    </nav>
-
-    <!-- HERO CONTENT -->
-    <div class="hero-content container hero-centered">
-        <h1>A better way to <span class="highlight">connect</span> with local services</h1>
-        <p class="hero-sub">No cold calls. No spam. Just trusted connections between clients and service providers.</p>
-
-        <div class="hero-buttons">
-            <a href="https://form.jotform.com/242206909149055" class="btn btn-primary">🏡 Find a Service</a>
-            <a href="https://form.jotform.com/253445794538066" class="btn btn-outline">🛠️ Offer a Service</a>
-        </div>
-
-        <p class="hero-note"><em>Early access connections are currently facilitated through Nalution concierge matching.</em></p>
-
-        <!-- TESTIMONIAL BELT -->
-        <div class="testimonial-belt">
-            <div class="testimonial-track" id="testimonialTrack">
-                <!-- Card 1 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://i.pravatar.cc/50?img=47">
-                        <strong>Sarah M.</strong>
-                        <span class="category">Homeowner</span>
+            <!-- TESTIMONIAL BELT -->
+            <div class="testimonial-belt">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <!-- Card 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://i.pravatar.cc/50?img=47">
+                            <strong>Sarah M.</strong>
+                            <span class="category">Homeowner</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p>Finally a platform that connects me with people I actually trust.</p>
                     </div>
-                    <div class="stars">★★★★★</div>
-                    <p>Finally a platform that connects me with people I actually trust.</p>
-                </div>
 
-                <!-- Card 2 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://i.pravatar.cc/50?img=14">
-                        <strong>JLA Home Improvements Llc</strong>
-                        <span class="category">Contractor</span>
+                    <!-- Card 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://i.pravatar.cc/50?img=14">
+                            <strong>JLA Home Improvements Llc</strong>
+                            <span class="category">Contractor</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p>No more chasing leads. Clients come already interested.</p>
                     </div>
-                    <div class="stars">★★★★★</div>
-                    <p>No more chasing leads. Clients come already interested.</p>
-                </div>
 
-                <!-- Card 3 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://i.pravatar.cc/50?img=45">
-                        <strong>Emily R.</strong>
-                        <span class="category">Property Manager</span>
+                    <!-- Card 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://i.pravatar.cc/50?img=45">
+                            <strong>Emily R.</strong>
+                            <span class="category">Property Manager</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p>This replaced three different platforms for us.</p>
                     </div>
-                    <div class="stars">★★★★★</div>
-                    <p>This replaced three different platforms for us.</p>
-                </div>
 
-                <!-- Duplicate cards for infinite loop -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://i.pravatar.cc/50?img=47">
-                        <strong>Sarah M.</strong>
-                        <span class="category">Homeowner</span>
+                    <!-- Duplicate cards for infinite loop -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://i.pravatar.cc/50?img=47">
+                            <strong>Sarah M.</strong>
+                            <span class="category">Homeowner</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p>For the first time, I feel confident about who I’m hiring.</p>
                     </div>
-                    <div class="stars">★★★★★</div>
-                    <p>For the first time, I feel confident about who I’m hiring.</p>
-                </div>
 
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://i.pravatar.cc/50?img=14">
-                        <strong>JLA Home Improvements Llc</strong>
-                        <span class="category">Contractor</span>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://i.pravatar.cc/50?img=14">
+                            <strong>JLA Home Improvements Llc</strong>
+                            <span class="category">Contractor</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p>No more chasing leads. Clients come already interested.</p>
                     </div>
-                    <div class="stars">★★★★★</div>
-                    <p>No more chasing leads. Clients come already interested.</p>
-                </div>
 
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="https://i.pravatar.cc/50?img=45">
-                        <strong>Emily R.</strong>
-                        <span class="category">Property Manager</span>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://i.pravatar.cc/50?img=45">
+                            <strong>Emily R.</strong>
+                            <span class="category">Property Manager</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p>This replaced three different platforms for us.</p>
                     </div>
-                    <div class="stars">★★★★★</div>
-                    <p>This replaced three different platforms for us.</p>
                 </div>
             </div>
+
+        </div>
+    </section>
+
+    <!-- WHO WE ARE -->
+    <section id="about" class="section">
+        <h1 style="text-align: center; padding-bottom: 15px; color: #1e293b;">Who We Are</h1>
+
+        <div class="container grid-3">
+            <div class="card">
+                <h3>Connection-First Platform</h3>
+                <p>Nalution is built to remove friction from finding and offering local services.</p>
+            </div>
+            <div class="card">
+                <h3>Trust and Mutual Intent</h3>
+                <p>We focus on trust, real outcomes, and mutual intent — not ads or cold outreach.</p>
+            </div>
+            <div class="card">
+                <h3>Real Results</h3>
+                <p>Clients find the services they need when they need them, and providers connect with the right people.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+
+        <!-- Newsletter Section -->
+        <div class="footer-newsletter container">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get updates via email or SMS.</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="tel" name="phone" placeholder="Enter your phone (optional)">
+                <button type="submit">Subscribe</button>
+
+                <p class="newsletter-disclaimer">
+                    Nalution sends messages only in response to user request or account activity. We do not send
+                    unsolicited marketing text messages.
+                </p>
+
+                <p id="newsletterMessage"
+                    style="display:none; color: var(--primary); font-weight: bold; margin-top: 0.5rem;">
+                    Thank you! Your subscription has been received.
+                </p>
+            </form>
         </div>
 
+        <!-- Divider -->
+        <hr class="footer-divider">
+
+        <!-- Contact + Links Section -->
+        <div class="footer-bottom container">
+            <!-- Left: Contact Info -->
+            <div class="footer-contact">
+                <p>Email: <a href="mailto:csupport@nalutionsolution.com">support@nalutionsolution.com</a></p>
+                <p>Phone: <a href="tel:+18338657904">(833) 865-7904</a></p>
+                <p>Location: Raritan, NJ</p>
+            </div>
+
+            <!-- Middle: Policy links -->
+            <div class="footer-links">
+                <a href="privacy-policy">Privacy Policy</a>
+                <a href="terms">Terms & Condtions</a>
+                <a href="cookies">Cookie Policy</a>
+            </div>
+
+            <!-- Right: Branding + copyright -->
+            <div class="footer-left">
+                <strong>Nalution Properties Llc</strong> &copy; 2026
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add at the bottom of body or hero section -->
+    <div class="mobile-cta">
+        <a href="https://form.jotform.com/242206909149055" class="btn btn-primary">🏡 Find a Service</a>
+        <a href="https://form.jotform.com/253445794538066" class="btn btn-outline">🛠️ Offer a Service</a>
     </div>
-</section>
 
-<!-- WHO WE ARE -->
-<section id="about" class="section">
-    <h1 style="text-align: center; padding-bottom: 15px; color: #1e293b;">Who We Are</h1>
+    <!-- Cookie consent modal -->
+    <div id="cookieModal" class="cookie-modal">
+        <h3>Cookie Preferences</h3>
+        <p>Manage which cookies you allow us to use.</p>
 
-    <div class="container grid-3">
-        <div class="card">
-            <h3>Connection-First Platform</h3>
-            <p>Nalution is built to remove friction from finding and offering local services.</p>
-        </div>
-        <div class="card">
-            <h3>Trust and Mutual Intent</h3>
-            <p>We focus on trust, real outcomes, and mutual intent — not ads or cold outreach.</p>
-        </div>
-        <div class="card">
-            <h3>Real Results</h3>
-            <p>Clients find the services they need when they need them, and providers connect with the right people.</p>
-        </div>
-    </div>
-</section>
-
-
-<!-- FOOTER -->
-<footer class="footer" id="contact">
-
-    <!-- Newsletter Section -->
-    <div class="footer-newsletter container">
-        <h3>Subscribe to Our Newsletter</h3>
-        <p>Get updates via email or SMS.</p>
-        <form id="newsletterForm" class="newsletter-form">
-            <input type="email" name="email" placeholder="Enter your email" required>
-            <input type="tel" name="phone" placeholder="Enter your phone (optional)">
-            <button type="submit">Subscribe</button>
-    
-            <p class="newsletter-disclaimer">
-                Nalution sends messages only in response to user request or account activity. We do not send unsolicited marketing text messages.
-            </p>
-    
-            <p id="newsletterMessage" style="display:none; color: var(--primary); font-weight: bold; margin-top: 0.5rem;">
-                Thank you! Your subscription has been received.
-            </p>
-        </form>
-    </div>
-
-    <!-- Divider -->
-    <hr class="footer-divider">
-
-    <!-- Contact + Links Section -->
-    <div class="footer-bottom container">
-        <!-- Left: Contact Info -->
-        <div class="footer-contact">
-            <p>Email: <a href="mailto:csupport@nalutionsolution.com">support@nalutionsolution.com</a></p>
-            <p>Phone: <a href="tel:+18338657904">(833) 865-7904</a></p>
-            <p>Location: Raritan, NJ</p>
+        <div class="cookie-category">
+            <span>Essential Cookies</span>
+            <input type="checkbox" checked disabled />
         </div>
 
-        <!-- Middle: Policy links -->
-        <div class="footer-links">
-            <a href="privacy-policy">Privacy Policy</a>
-            <a href="terms">Terms & Condtions</a>
-            <a href="cookies">Cookie Policy</a>
+        <div class="cookie-category">
+            <span>Analytics Cookies</span>
+            <label class="switch">
+                <input type="checkbox" id="analyticsToggle">
+                <span class="slider round"></span>
+            </label>
         </div>
 
-        <!-- Right: Branding + copyright -->
-        <div class="footer-left">
-            <strong>Nalution Properties Llc</strong> &copy; 2026
+        <div class="cookie-category">
+            <span>Marketing Cookies</span>
+            <label class="switch">
+                <input type="checkbox" id="marketingToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <div class="modal-buttons">
+            <button id="saveCookies" class="btn-primary">Save Preferences</button>
         </div>
     </div>
-</footer>
 
- <!-- Add at the bottom of body or hero section -->
- <div class="mobile-cta">
-    <a href="https://form.jotform.com/242206909149055" class="btn btn-primary">🏡  Find a Service</a>
-    <a href="https://form.jotform.com/253445794538066" class="btn btn-outline">🛠️  Offer a Service</a>
-</div>
 
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -156,3 +156,40 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
         console.error(err);
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const customizeBtn = document.querySelector('.cc-link');
+    const modal = document.getElementById('cookieModal');
+    const saveBtn = document.getElementById('saveCookies');
+    const analyticsToggle = document.getElementById('analyticsToggle');
+    const marketingToggle = document.getElementById('marketingToggle');
+  
+    if (customizeBtn) {
+      customizeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.style.display = 'block';
+      });
+    }
+  
+    saveBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+  
+      // Enable analytics if checked
+      if (analyticsToggle.checked) {
+        document
+          .querySelectorAll('script[type="text/plain"][data-cookiecategory="analytics"]')
+          .forEach(script => {
+            const s = document.createElement('script');
+            if (script.src) s.src = script.src;
+            else s.textContent = script.textContent;
+            document.body.appendChild(s);
+          });
+      }
+  
+      // Marketing scripts can be handled similarly if you have any
+      if (marketingToggle.checked) {
+        // Add marketing script logic here
+      }
+    });
+  });
+  
